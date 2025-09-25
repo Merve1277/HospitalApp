@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2 class="mb-4">📊 Hasta Dashboard</h2>
+
+<div class="row">
+    <!-- Toplam Hasta -->
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Toplam Hasta</h5>
+                <p class="card-text fs-3">@ViewBag.TotalPatients</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ortalama Yaş -->
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Ortalama Yaş</h5>
+                <p class="card-text fs-3">@ViewBag.AverageAge</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Son Eklenen Hasta -->
+    <div class="col-md-3">
+        <div class="card text-dark bg-warning mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">Son Eklenen Hasta</h5>
+                <p class="card-text fs-6">@ViewBag.LastPatient</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- En Sık Görülen Hastalık -->
+    <div class="col-md-3">
+        <div class="card text-white bg-danger mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">En Sık Görülen Hastalık</h5>
+                <p class="card-text fs-6">@ViewBag.MostCommonDisease</p>
+            </div>
+        </div>
+    </div>
+</div>

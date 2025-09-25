@@ -1,0 +1,9 @@
+services:
+  hospital-webapp:
+    build: ./WebApp # Dockerfile burada olduğu için ./WebApp yazmalısın
+    container_name: hospital-webapp
+    ports:
+      - "8090:8080" # Dışarıda 8090 → İçeride 8080
+    volumes:
+      - ./WebApp:/app
+    command: dotnet watch run --urls http://+:8080
